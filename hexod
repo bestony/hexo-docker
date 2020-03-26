@@ -1,0 +1,7 @@
+#!/bin/sh
+docker run \
+  --interactive --tty --rm \
+  --volume "$PWD":/app \
+  --workdir /app \
+  -p 4000:4000 \
+  hexojs/hexojs:latest "hexo" "$@"
